@@ -1,0 +1,27 @@
+.App {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: $color-black;
+  background-color: $color-toast-gray;
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+
+  &.green {
+    color: $color-green;
+  }
+
+  &.yellow {
+    color: $color-yellow;
+  }
+
+  &.red {
+    color: $color-red;
+  }
+
+  &.red-alt {
+    color: $color-red-alt;
+  }
+}

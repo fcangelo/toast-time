@@ -1,0 +1,24 @@
+@import 'variables';
+@import 'fonts';
+@import 'app';
+@import 'form-elements';
+@import 'components/time-menu';
+@import 'components/time-select';
+@import 'components/time-add';
+@import 'components/counter';
+@import 'components/control';
+
+.counter {
+  font-size: 5em;
+  text-align: center;
+}
+
+.control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control__item {
+  padding: 1em;
+}
