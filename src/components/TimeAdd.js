@@ -3,8 +3,8 @@ import React from 'react';
 function TimeAdd() {
   return (
     <div className="time-add">
-      <div class="time-add__title">Add a time:</div>
-      <label for="min" class="time-add__label">
+      <div className="time-add__title">Add a time:</div>
+      <label htmlFor="min" className="time-add__label">
         Min
       </label>
       <input
@@ -12,9 +12,9 @@ function TimeAdd() {
         name="min"
         id="min"
         placeholder="Min"
-        class="time-add__input"
+        className="time-add__input"
       />
-      <label for="max" class="time-add__label">
+      <label htmlFor="max" className="time-add__label">
         Max
       </label>
       <input
@@ -22,9 +22,9 @@ function TimeAdd() {
         name="max"
         id="max"
         placeholder="Max"
-        class="time-add__input"
+        className="time-add__input"
       />
-      <button class="time-add__button">Add</button>
+      <button className="time-add__button">Add</button>
     </div>
   );
 }

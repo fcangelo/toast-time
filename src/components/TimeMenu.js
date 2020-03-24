@@ -6,7 +6,7 @@ function TimeMenu() {
   return (
     <div className="time-menu">
       <TimeSelect></TimeSelect>
-      <div class="time-menu__add">Add a time</div>
+      <div className="time-menu__add">Add a time</div>
       <TimeAdd></TimeAdd>
     </div>
   );

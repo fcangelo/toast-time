@@ -1,0 +1,65 @@
+{
+  "sections": [{
+      "name": "start",
+      "title": "Pre-Speaking Roles",
+      "times": [{
+        "label": "Humorist",
+        "min": 1,
+        "max": 2
+      }]
+    },
+    {
+      "name": "speaking",
+      "title": "Speaking",
+      "times": [{
+          "label": "Icebreaker",
+          "min": 4,
+          "max": 6
+        },
+        {
+          "label": "Standard Speech",
+          "min": 5,
+          "max": 7
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "title": "Table Topics",
+      "times": [{
+        "label": "Standard Table Topic",
+        "min": 1,
+        "max": 2
+      }]
+    },
+    {
+      "name": "evaluation",
+      "title": "Evaluation",
+      "times": [{
+        "label": "Standard Evaluation",
+        "min": 2,
+        "max": 3
+      }]
+    },
+    {
+      "name": "end",
+      "title": "Post-Evaluation Roles",
+      "times": [{
+          "label": "Master Listener",
+          "min": 2,
+          "max": 3
+        },
+        {
+          "label": "Grammarian",
+          "min": 1,
+          "max": 2
+        },
+        {
+          "label": "General Evaluator",
+          "min": 3,
+          "max": 5
+        }
+      ]
+    }
+  ]
+}
