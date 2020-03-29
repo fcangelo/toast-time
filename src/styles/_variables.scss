@@ -2,10 +2,14 @@
 $color-black: #000000;
 $color-white: #ffffff;
 $color-toast-gray: #a9b2b1;
-$color-green: #02D488;
+$color-toast-yellow: #f2df74;
+$color-toast-blue: #004165;
+$color-toast-maroon: #772432;
+$color-toast-red: #cd202c;
+$color-green: #02d488;
 $color-yellow: #f7e155;
 $color-red: #ff7575;
-$color-red-alt: #ff6060;
+$color-red-alt: $color-toast-red; // #ff6060
 
 // Sizes
 $size-l: 1.5em;

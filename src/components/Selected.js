@@ -1,12 +1,17 @@
 import React from 'react';
+import TimeRange from './TimeRange';
 
 function Selected(props) {
   return (
     <div className="selected">
       <div className="selected__section">
-        <h5 className="selected__category">Category: {props.category}</h5>
+        <h5 className="selected__category">Category: {props.section}</h5>
         <h1 className="selected__time">
-          Time: {props.time} ({Math.round(props.min / 60)} - {Math.round(props.max / 60)} mins)
+          Time: {props.time}
+          <TimeRange
+            min={props.min}
+            max={props.max}
+          />
         </h1>
       </div>
     </div>

@@ -4,6 +4,7 @@ import Selected from './components/Selected';
 import Counter from './components/Counter';
 import Control from './components/Control';
 import Times from './data/times';
+import TimeSelect from './components/TimeSelect';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,15 +13,13 @@ class App extends React.Component {
     this.times = Times;
     this.initial = {
       seconds: 0,
-      counting: false
+      counting: false,
+      menuOpen: false
     };
     this.default = {
-      time: this.times.sections[0].times[0].label,
-      category: this.times.sections[0].title,
-      min: this.times.sections[0].times[0].min,
-      max: this.times.sections[0].times[0].max
+      sectionID: 0,
+      timeID: 0
     };
-
     this.state = {
       ...this.initial,
       ...this.default
@@ -30,6 +29,33 @@ class App extends React.Component {
   clearCount() {
     this.setState(this.initial);
     this.pauseCount();
+  }
+
+  getMax() {
+    return this.times.sections[this.state.sectionID].times[this.state.timeID]
+      .max;
+  }
+
+  getMin() {
+    return this.times.sections[this.state.sectionID].times[this.state.timeID]
+      .min;
+  }
+
+  getSection() {
+    return this.times.sections[this.state.sectionID].title;
+  }
+
+  getTime() {
+    return this.times.sections[this.state.sectionID].times[this.state.timeID]
+      .label;
+  }
+
+  onTimeClick(sectionID, timeID) {
+    this.setState({
+      sectionID: sectionID,
+      timeID: timeID,
+      menuOpen: false
+    });
   }
 
   pauseCount() {
@@ -52,6 +78,12 @@ class App extends React.Component {
     }));
   }
 
+  toggleMenu() {
+    this.setState(state => ({
+      menuOpen: !state.menuOpen
+    }));
+  }
+
   toggleStartStop() {
     if (this.state.counting) {
       this.pauseCount();
@@ -63,14 +95,18 @@ class App extends React.Component {
   }
 
   render() {
+    const min = this.getMin();
+    const max = this.getMax();
     const color = (() => {
-      const midpoint = Math.round((this.state.min + this.state.max) / 2);
+      const midpoint = Math.round((min + max) / 2);
 
-      if (this.state.seconds >= this.state.max) {
+      if (this.state.seconds >= max + 30) {
+        return ' red-alt';
+      } else if (this.state.seconds >= max) {
         return ' red';
       } else if (this.state.seconds >= midpoint) {
         return ' yellow';
-      } else if (this.state.seconds >= this.state.min) {
+      } else if (this.state.seconds >= min) {
         return ' green';
       }
 
@@ -80,18 +116,23 @@ class App extends React.Component {
     return (
       <div className={`App${color}`}>
         <div className="display">
-          <Menu />
+          <Menu open={this.state.menuOpen} onClick={() => this.toggleMenu()} />
           <Selected
-            category={this.state.category}
-            time={this.state.time}
-            min={this.state.min}
-            max={this.state.max}
+            section={this.getSection()}
+            time={this.getTime()}
+            min={min}
+            max={max}
           />
           <Counter seconds={this.state.seconds} />
           <Control
             counting={this.state.counting}
             toggleCount={() => this.toggleStartStop()}
             clearCount={() => this.clearCount()}
+          />
+          <TimeSelect
+            open={this.state.menuOpen}
+            times={this.times}
+            onClick={(sectionID, timeID) => this.onTimeClick(sectionID, timeID)}
           />
         </div>
       </div>

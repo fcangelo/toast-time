@@ -1,35 +1,34 @@
 import React from 'react';
 import TimeAdd from './TimeAdd';
+import TimeList from "./TimeList";
+import TimeListItem from './TimeListItem';
 
-function processInput(data) {
-  let formattedTimes = [];
-
-  for (let section = 0; section < data.sections.length; section++) {
-    const selectedSection = data.sections[section];
-    let sectionTimes = [];
-
-    for (let j = 0; j < selectedSection.times.length; j++) {
-      const time = selectedSection.times[j];
-
-      sectionTimes.push({
-        label: time.label,
-        value: `${time.min},${time.max}`
-      });
-    }
-
-    formattedTimes.push({
-      label: selectedSection.title,
-      options: sectionTimes
+function TimeSelect(props) {
+  const state = props.open ? ' open' : '';
+  const allTimes = props.times.sections.map((section, sectionID) => {
+    const times = section.times.map((time, timeID) => {
+      return (
+        <TimeListItem
+          key={timeID}
+          onClick={() => props.onClick(sectionID, timeID)}
+          title={time.label}
+          min={time.min}
+          max={time.max}
+        />
+      );
     });
-  }
 
-  return formattedTimes;
-}
+    return (
+      <TimeListItem key={sectionID} title={section.title}>
+        <TimeList>{times}</TimeList>
+      </TimeListItem>
+    );
+  });
 
-function TimeSelect() {
   return (
-    <div className="time-select">
+    <div className={`time-select${state}`}>
       <TimeAdd />
+      <TimeList>{allTimes}</TimeList>
     </div>
   );
 }
