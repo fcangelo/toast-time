@@ -1,0 +1,22 @@
+.menu {
+  display: flex;
+
+  .menu__button,
+  .menu__text {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu__button {
+    justify-content: flex-start;
+    text-align: left;
+    font-size: $size-xl;
+  }
+
+  .menu__text {
+    justify-content: flex-end;
+    flex: 1 1 auto;
+    text-align: right;
+    font-size: $size-l;
+  }
+}

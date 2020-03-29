@@ -4,8 +4,8 @@
       "title": "Pre-Speaking Roles",
       "times": [{
         "label": "Humorist",
-        "min": 1,
-        "max": 2
+        "min": 60,
+        "max": 120
       }]
     },
     {
@@ -13,13 +13,13 @@
       "title": "Speaking",
       "times": [{
           "label": "Icebreaker",
-          "min": 4,
-          "max": 6
+          "min": 240,
+          "max": 360
         },
         {
           "label": "Standard Speech",
-          "min": 5,
-          "max": 7
+          "min": 300,
+          "max": 420
         }
       ]
     },
@@ -28,8 +28,8 @@
       "title": "Table Topics",
       "times": [{
         "label": "Standard Table Topic",
-        "min": 1,
-        "max": 2
+        "min": 60,
+        "max": 120
       }]
     },
     {
@@ -37,8 +37,8 @@
       "title": "Evaluation",
       "times": [{
         "label": "Standard Evaluation",
-        "min": 2,
-        "max": 3
+        "min": 120,
+        "max": 180
       }]
     },
     {
@@ -46,18 +46,18 @@
       "title": "Post-Evaluation Roles",
       "times": [{
           "label": "Master Listener",
-          "min": 2,
-          "max": 3
+          "min": 120,
+          "max": 180
         },
         {
           "label": "Grammarian",
-          "min": 1,
-          "max": 2
+          "min": 60,
+          "max": 120
         },
         {
           "label": "General Evaluator",
-          "min": 3,
-          "max": 5
+          "min": 180,
+          "max": 300
         }
       ]
     }

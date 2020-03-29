@@ -1,9 +1,8 @@
 import React from 'react';
-import Select from 'react-select';
-import Times from '../data/times';
+import TimeAdd from './TimeAdd';
 
 function processInput(data) {
-  let formattedTimes = []
+  let formattedTimes = [];
 
   for (let section = 0; section < data.sections.length; section++) {
     const selectedSection = data.sections[section];
@@ -30,10 +29,7 @@ function processInput(data) {
 function TimeSelect() {
   return (
     <div className="time-select">
-      <label className="time-select__label">
-        Choose a time:
-      </label>
-      <Select options={processInput(Times)} className="time-select__menu"></Select>
+      <TimeAdd />
     </div>
   );
 }

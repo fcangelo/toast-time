@@ -1,7 +1,16 @@
 // Colors
 $color-black: #000000;
+$color-white: #ffffff;
 $color-toast-gray: #a9b2b1;
 $color-green: #02D488;
 $color-yellow: #f7e155;
 $color-red: #ff7575;
 $color-red-alt: #ff6060;
+
+// Sizes
+$size-l: 1.5em;
+$size-xl: 3em;
+
+// Transitions
+$transition-set: 0.1s ease-in-out;
+$transition-all: all $transition-set;

@@ -1,2 +1,50 @@
 // Style select menus with: https://github.com/JedWatson/react-select
 // Style buttons and inputs to match
+button,
+input[type="submit"],
+input[type="reset"],
+a.link-button {
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+
+  &:active,
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+a.link-button {
+  display: inline-block;
+  text-decoration: none;
+}
+
+// Add button styles
+button.standard,
+input[type="submit"].standard,
+input[type="reset"].standard,
+a.link-button.standard {
+  transform: translate(0, 0);
+  transition: transform $transition-set;
+
+  &:hover {
+    transform: translate(0.1em, 0.1em);
+  }
+
+  &:active,
+  &:focus {
+    transform: translate(0.2em, 0.2em);
+  }
+}

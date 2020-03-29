@@ -10,18 +10,18 @@
   font-size: 1em;
 
   &.green {
-    color: $color-green;
+    background-color: $color-green;
   }
 
   &.yellow {
-    color: $color-yellow;
+    background-color: $color-yellow;
   }
 
   &.red {
-    color: $color-red;
+    background-color: $color-red;
   }
 
   &.red-alt {
-    color: $color-red-alt;
+    background-color: $color-red-alt;
   }
 }
