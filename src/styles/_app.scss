@@ -24,6 +24,31 @@
   background-color: $color-toast-gray;
   transition: background-color $transition-set;
 
+  .display {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: $size-width-max;
+    width: 100%;
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1 1 auto;
+
+      .container {
+        padding: 2em;
+      }
+    }
+  }
+
+  .testing {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
   &.green {
     background-color: $color-green;
   }
@@ -41,4 +66,17 @@
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration: 2s;
   }
+}
+
+.App,
+.display {
+  min-height: 100vh;
+}
+
+// IE Hacks
+_:-ms-fullscreen,
+:root .App,
+_:-ms-fullscreen,
+:root .display {
+  height: 100%;
 }

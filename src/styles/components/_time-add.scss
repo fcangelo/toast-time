@@ -1,3 +1,39 @@
 .time-add {
-  display: none;
+  .time-add__form-block {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $color-toast-maroon;
+    border-radius: $size-m;
+    margin: 1em 0;
+    padding: 1em;
+
+    .time-add__form-entry {
+      padding: 0.5em;
+      width: 100%;
+
+      .time-add__label {
+        padding-bottom: 0.5em;
+      }
+
+      .time-add__input {
+        width: 100%;
+      }
+
+      .time-add__label,
+      .time-add__input {
+        display: block;
+      }
+    }
+
+    .time-add__button {
+      display: block;
+      font-size: $size-xl;
+      width: 100%;
+    }
+  }
+
+  .time-add__title {
+    padding: $size-m;
+    font-size: $size-l;
+  }
 }

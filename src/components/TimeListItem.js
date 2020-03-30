@@ -1,7 +1,14 @@
 import React from 'react';
 import TimeRange from './TimeRange';
+import { MdDelete } from 'react-icons/md';
 
 function TimeListItem(props) {
+  const del = (
+    <span className="time-list-item__delete" onClick={props.onRemove}>
+      <MdDelete />
+    </span>
+  );
+  const optionalRemove = props.remove ? del : "";
   let optionalRange = '';
 
   if (props.min && props.max) {
@@ -19,6 +26,7 @@ function TimeListItem(props) {
         {props.title}
         {optionalRange}
       </span>
+      {optionalRemove}
       {props.children}
     </li>
   );

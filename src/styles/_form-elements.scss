@@ -1,5 +1,5 @@
-// Style select menus with: https://github.com/JedWatson/react-select
-// Style buttons and inputs to match
+// Buttons
+
 button,
 input[type="submit"],
 input[type="reset"],
@@ -46,5 +46,36 @@ a.link-button.standard {
   &:active,
   &:focus {
     transform: translate(0.2em, 0.2em);
+  }
+}
+
+// Inputs
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+input,
+textarea {
+  border: $size-s solid transparent;
+  border-radius: $size-s;
+  font-size: $size-m;
+  background-color: $color-toast-gray;
+  padding: $size-s;
+  transition: $transition-all;
+
+  &.error {
+    border: $size-s solid $color-toast-red;
+  }
+
+  &:hover {
+    background-color: $color-white;
+  }
+
+  &:focus,
+  &:active {
+    background-color: $color-white;
   }
 }

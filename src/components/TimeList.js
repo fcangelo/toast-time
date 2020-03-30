@@ -2,9 +2,11 @@ import React from 'react';
 
 function TimeList(props) {
   return (
-    <ul className="time-list">
-      {props.children}
-    </ul>
+    <div className="time-list-container">
+      <ul className="time-list">
+        {props.children}
+      </ul>
+    </div>
   );
 }
 

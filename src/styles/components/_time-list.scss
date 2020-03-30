@@ -1,0 +1,20 @@
+.time-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-toast-maroon;
+  border-radius: $size-m;
+  margin: 1em 0;
+  padding: 1em;
+  width: 100%;
+
+  .time-list {
+    list-style-type: none;
+
+    .time-list .time-list-item__title {
+      font-size: $size-l;
+      cursor: pointer;
+    }
+  }
+}
+

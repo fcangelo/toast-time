@@ -1,13 +1,53 @@
 .time-select {
   position: fixed;
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   top: 0;
   left: 0;
-  height: 100%;
+  bottom: 0;
+  height: auto;
   width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: $color-white;
   background-color: $color-toast-blue;
+  transform: translateY(-100%);
+  transition: transform $transition-set;
+
+  & > * {
+    max-width: $size-width-max;
+    width: 100%;
+  }
+
+  .time-select__close {
+    position: relative;
+    margin: 0;
+    padding: 0.25em;
+    // max-width: $size-width-max;
+    // width: 100%;
+    font-size: $size-xl;
+    text-align: left;
+  }
+
+  .time-select__add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // cursor: pointer;
+
+    & > span {
+      padding-right: 0.25em;
+    }
+  }
+
+  .time-select__choose {
+    padding: $size-m;
+    font-size: $size-l;
+  }
 
   &.open {
-    display: flex;
+    transform: translateY(0);
   }
 }

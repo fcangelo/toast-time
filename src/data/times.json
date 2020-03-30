@@ -1,17 +1,32 @@
 {
-  "sections": [{
+  "sections": [
+    {
+      "name": "timer",
+      "title": "Timer",
+      "times": [
+        {
+          "label": "Demonstration",
+          "min": 3,
+          "max": 9
+        }
+      ]
+    },
+    {
       "name": "start",
       "title": "Pre-Speaking Roles",
-      "times": [{
-        "label": "Humorist",
-        "min": 60,
-        "max": 120
-      }]
+      "times": [
+        {
+          "label": "Humorist",
+          "min": 60,
+          "max": 120
+        }
+      ]
     },
     {
       "name": "speaking",
       "title": "Speaking",
-      "times": [{
+      "times": [
+        {
           "label": "Icebreaker",
           "min": 240,
           "max": 360
@@ -24,27 +39,43 @@
       ]
     },
     {
+      "name": "silence",
+      "title": "Post-Speaking Roles",
+      "times": [
+        {
+          "label": "Feedback",
+          "min": 90,
+          "max": 90
+        }
+      ]
+    },
+    {
       "name": "table",
       "title": "Table Topics",
-      "times": [{
-        "label": "Standard Table Topic",
-        "min": 60,
-        "max": 120
-      }]
+      "times": [
+        {
+          "label": "Standard Table Topic",
+          "min": 60,
+          "max": 120
+        }
+      ]
     },
     {
       "name": "evaluation",
       "title": "Evaluation",
-      "times": [{
-        "label": "Standard Evaluation",
-        "min": 120,
-        "max": 180
-      }]
+      "times": [
+        {
+          "label": "Standard Evaluation",
+          "min": 120,
+          "max": 180
+        }
+      ]
     },
     {
       "name": "end",
       "title": "Post-Evaluation Roles",
-      "times": [{
+      "times": [
+        {
           "label": "Master Listener",
           "min": 120,
           "max": 180

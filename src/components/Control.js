@@ -1,7 +1,7 @@
 import React from 'react';
-import { MdDelete } from "react-icons/md";
-import { MdPlayArrow } from "react-icons/md";
-import { MdPause } from "react-icons/md";
+import { MdDelete } from 'react-icons/md';
+import { MdPlayArrow } from 'react-icons/md';
+import { MdPause } from 'react-icons/md';
 
 function Control(props) {
   const playPauseBtn  = props.counting ? <MdPause /> : <MdPlayArrow />;
