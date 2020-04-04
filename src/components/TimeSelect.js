@@ -12,6 +12,7 @@ function TimeSelect(props) {
   const allTimes = props.times.sections.map((section, sectionID) => {
     const isCustom = section.name === 'custom';
     const isEmpty = section.times.length === 0;
+    const isCurSection = sectionID === props.curSectionID;
     const addTime = (
       <div className="time-select__add">
         <span>(Add a time below)</span>
@@ -23,12 +24,13 @@ function TimeSelect(props) {
     if (isCustom && isEmpty) {
       times = (
         <TimeListItem
-          // onClick={() => console.log("hi")}
           title={addTime}
         ></TimeListItem>
       );
     } else {
       times = section.times.map((time, timeID) => {
+        const isCurTime = isCurSection && timeID === props.curTimeID;
+
         return (
           <TimeListItem
             key={timeID}
@@ -38,13 +40,18 @@ function TimeSelect(props) {
             max={time.max}
             remove={isCustom}
             onRemove={() => props.removeTime(timeID)}
+            isCurrent={isCurTime}
           />
         );
       });
     }
 
     return (
-      <TimeListItem key={sectionID} title={section.title}>
+      <TimeListItem
+        key={sectionID}
+        title={section.title}
+        isCurrent={isCurSection}
+      >
         <TimeList>{times}</TimeList>
       </TimeListItem>
     );

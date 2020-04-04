@@ -20,7 +20,7 @@ function TimeRange(props) {
 
   return (
     <span className="time-range">
-      {props.title} ({minTime} - {maxTime} {timeString})
+      ({minTime} - {maxTime} {timeString})
     </span>
   );
 }

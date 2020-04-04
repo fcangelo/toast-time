@@ -196,6 +196,7 @@ class App extends React.Component {
                 time={this.getTime()}
                 min={min}
                 max={max}
+                action={() => this.toggleMenu()}
               />
               <Counter seconds={this.state.seconds} />
               <Control
@@ -206,6 +207,8 @@ class App extends React.Component {
               <TimeSelect
                 open={this.state.menuOpen}
                 times={this.state.times}
+                curSectionID={this.state.sectionID}
+                curTimeID={this.state.timeID}
                 onClick={(sectionID, timeID) =>
                   this.onTimeClick(sectionID, timeID)
                 }

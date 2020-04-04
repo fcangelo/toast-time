@@ -9,9 +9,6 @@ function Menu(props) {
       <button className="menu__button" onClick={props.onClick}>
         <FiMenu />
       </button>
-      {/* <div className="menu__text">
-        <span>Switch Times</span>
-      </div> */}
     </menu>
   );
 }

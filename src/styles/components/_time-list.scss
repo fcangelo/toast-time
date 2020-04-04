@@ -11,9 +11,32 @@
   .time-list {
     list-style-type: none;
 
-    .time-list .time-list-item__title {
-      font-size: $size-l;
-      cursor: pointer;
+    .time-list {
+      .time-list-item {
+        display: flex;
+        align-items: center;
+      }
+
+      .time-list-item__title {
+        font-size: $size-l;
+        cursor: pointer;
+      }
+
+      .time-list-item__delete {
+        line-height: $size-m;
+        padding-left: $size-xs;
+      }
+    }
+
+    .time-list-item__title {
+      display: flex;
+      align-items: center;
+
+      .time-list-item__icon {
+        height: 24px;
+        width: 24px;
+        margin-right: 16px;
+      }
     }
   }
 }
